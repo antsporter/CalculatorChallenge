@@ -1,0 +1,85 @@
+<html>
+
+<head>
+	<!--MAKE SURE THE CSS SHEET IS IN THE SAME FOLDER AS HTML-->
+	<link rel="stylesheet" href="calculator_challenge_styles.css"> 
+</head>
+
+<script>
+	//puts numbers and operators stored in x onto the input window
+	var screenRef = document.getElementById("inputwindow");
+	var numRef = document.getElementsByClassName("nums");
+	var opRef = document.getElementsByClassName("operator");
+	var funcRef = document.getElementsByClassName("functions");
+
+	function pushButton(x) {
+		document.getElementById('inputwindow').value +=x;
+	}
+
+	//when pressing clear this will clear the input window
+	function clearInput() {
+	  	document.getElementById('inputwindow').value = "";
+	}
+
+	//when pressing equals this will evaluate the maths in the input window and display the result
+	//will also display error if calculated number is more than 14
+	function calculateResult() {
+		var screen = document.getElementById('inputwindow');
+		if(screen.value.length > 14){
+		  document.getElementById('inputwindow').value = "Err! Num too Long";
+		}else{	
+		var result = eval(document.getElementById('inputwindow').value);
+	  	document.getElementById('inputwindow').value = result;
+		}
+	}
+
+	//when pushing Del key this will remove 1 digit from the input window
+	function goBack() {
+    	var value = document.getElementById("inputwindow").value;
+    	document.getElementById("inputwindow").value = value.substr(0, value.length - 1);
+	}
+</script>
+
+<body>
+
+<div class="calc_container">
+		<div>
+		<input type="text" name="inputwindow" id="inputwindow" disabled>
+		</div>
+		<div>
+			<input type="button" class="functions" id="memplus" value="M+" onclick="pushButton(this.value)">
+			<input type="button" class="functions" id="memminus" value="M-" onclick="pushButton(this.value)">
+			<input type="button" class="functions" id="back" value='Del' onclick="goBack()">
+			<input type="button" class="functions" id="clear" value="CE" onclick="clearInput()">
+	    </div>
+
+		<div>
+			<input type="button" class="nums" id="one" value="1" onclick="pushButton(this.value)">
+			<input type="button" class="nums" id="two" value="2" onclick="pushButton(this.value)">
+			<input type="button" class="nums" id="three" value="3" onclick="pushButton(this.value)">
+			<input type="button" class="operator" id="plus" value="+" onclick="pushButton(this.value)">
+	    </div>
+	    <div>
+			<input type="button" class="nums" id="four" value="4" onclick="pushButton(this.value)">
+			<input type="button" class="nums" id="five" value="5" onclick="pushButton(this.value)">
+			<input type="button" class="nums" id="six" value="6" onclick="pushButton(this.value)">
+			<input type="button" class="operator" id="minus" value="-" onclick="pushButton(this.value)">
+		</div>
+		<div>
+			<input type="button" class="nums" id="seven" value="7" onclick="pushButton(this.value)">
+			<input type="button" class="nums" id="eight" value="8" onclick="pushButton(this.value)">
+			<input type="button" class="nums" id="nine" value="9" onclick="pushButton(this.value)">
+			<input type="button" class="operator" id="by" value="x" onclick="pushButton('*')">
+	    </div>
+	    <div>			
+			<input type="button" class="nums" id="decimal" value="." onclick="pushButton(this.value)">
+			<input type="button" class="nums" id="zero" value="0" onclick="pushButton(this.value)">
+			<input type="button" class="nums" id="equal" value="=" onclick="calculateResult()">
+			<input type="button" class="operator" id="divide" value="÷" onclick="pushButton('/')">
+			
+		</div>
+</div>
+
+</body>
+
+</html>

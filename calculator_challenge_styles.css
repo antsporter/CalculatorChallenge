@@ -1,0 +1,74 @@
+body { 
+	background-color: #000;
+}
+
+.calc_container {
+	border: solid;
+	border-radius: 5px;
+	border-color: rgba(255, 255, 255, 0.781);
+	text-align: center;
+	padding: 5px;
+	width: 214px;
+	height: 320px;
+	margin: 100px auto;
+}
+
+input#inputwindow {
+    font-size: 20px;
+	text-align: right;
+	height: 50px;
+	width: 100%;
+	background-color: #999;
+	color: #000;
+	padding: 12px 20px;
+	margin-bottom: 2px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #777;
+}
+
+input[type="button"]{
+	width: 50px;
+	height: 50px;
+	font-size: 15px;
+	margin: 2px 0;
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.836);
+	background: rgba(255, 255, 255, 0.781);
+	border-radius: 5px;
+	display: inline-block;
+	border: none;
+	transition: all 0.4s ease 0s;
+
+	color:black;
+}
+
+input[type="button"]:hover{
+	background: #434343 !important;
+	color: rgba(180, 180, 180, 0.801);
+	letter-spacing: 1px;
+	-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+	transition: all 0.4s ease 0s;
+}
+
+.functions{
+	font-weight: bolder;
+	background: rgb(218, 68, 58) !important;
+}
+
+.functions:hover{
+	font-weight: bolder;
+	color: rgb(218, 68, 58) !important;
+}
+
+.operator {
+	font-weight: bolder;
+	background: rgb(212, 175, 73) !important;
+}
+
+.operator:hover{
+	font-weight:bolder;
+	color: rgb(212, 175, 73) !important;
+}
