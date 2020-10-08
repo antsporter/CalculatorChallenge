@@ -1,1 +1,1 @@
-# Calculator-Challenge
+# CalculatorChallenge
