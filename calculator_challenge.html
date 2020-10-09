@@ -38,6 +38,13 @@
     	var value = document.getElementById("inputwindow").value;
     	document.getElementById("inputwindow").value = value.substr(0, value.length - 1);
 	}
+
+	function opposite(){
+		var b=document.getElementById("inputwindow");
+		var n = b.value;
+		n = n * -1;
+		b.value = n;
+	}
 </script>
 
 <body>
@@ -47,36 +54,43 @@
 		<input type="text" name="inputwindow" id="inputwindow" disabled>
 		</div>
 		<div>
-			<input type="button" class="functions" id="memplus" value="M+" onclick="pushButton(this.value)">
-			<input type="button" class="functions" id="memminus" value="M-" onclick="pushButton(this.value)">
-			<input type="button" class="functions" id="back" value='Del' onclick="goBack()">
-			<input type="button" class="functions" id="clear" value="CE" onclick="clearInput()">
-	    </div>
-
-		<div>
-			<input type="button" class="nums" id="one" value="1" onclick="pushButton(this.value)">
-			<input type="button" class="nums" id="two" value="2" onclick="pushButton(this.value)">
-			<input type="button" class="nums" id="three" value="3" onclick="pushButton(this.value)">
-			<input type="button" class="operator" id="plus" value="+" onclick="pushButton(this.value)">
-	    </div>
-	    <div>
-			<input type="button" class="nums" id="four" value="4" onclick="pushButton(this.value)">
-			<input type="button" class="nums" id="five" value="5" onclick="pushButton(this.value)">
-			<input type="button" class="nums" id="six" value="6" onclick="pushButton(this.value)">
-			<input type="button" class="operator" id="minus" value="-" onclick="pushButton(this.value)">
+			<input type="button" class="functions" id="memclear" value="MC" onclick="pushButton(this.value)">
+			<input type="button" class="functions" id="memrecall" value="MR" onclick="pushButton(this.value)">
+			<input type="button" class="functions" id="memminus" value="M-" onclick="pushButton(this.value)">	
+			<input type="button" class="functions" id="memplus" value="M+" onclick="pushButton(this.value)">					
+			<input type="button" class="functions" id="clear" value="C" onclick="clearInput()">
 		</div>
 		<div>
 			<input type="button" class="nums" id="seven" value="7" onclick="pushButton(this.value)">
 			<input type="button" class="nums" id="eight" value="8" onclick="pushButton(this.value)">
 			<input type="button" class="nums" id="nine" value="9" onclick="pushButton(this.value)">
-			<input type="button" class="operator" id="by" value="x" onclick="pushButton('*')">
-	    </div>
-	    <div>			
-			<input type="button" class="nums" id="decimal" value="." onclick="pushButton(this.value)">
-			<input type="button" class="nums" id="zero" value="0" onclick="pushButton(this.value)">
-			<input type="button" class="nums" id="equal" value="=" onclick="calculateResult()">
 			<input type="button" class="operator" id="divide" value="÷" onclick="pushButton('/')">
+			<input type="button" class="functions" id="negative" value= "+/-" id="opp" onclick="opposite()">
 			
+		</div>
+		<div>
+			<input type="button" class="nums" id="four" value="4" onclick="pushButton(this.value)">
+			<input type="button" class="nums" id="five" value="5" onclick="pushButton(this.value)">
+			<input type="button" class="nums" id="six" value="6" onclick="pushButton(this.value)">
+			<input type="button" class="operator" id="by" value="x" onclick="pushButton('*')">
+			<input type="button" class="functions" id="back" value='Del' onclick="goBack()">
+			
+			
+		</div>
+		<div>
+			<input type="button" class="nums" id="one" value="1" onclick="pushButton(this.value)">
+			<input type="button" class="nums" id="two" value="2" onclick="pushButton(this.value)">
+			<input type="button" class="nums" id="three" value="3" onclick="pushButton(this.value)">
+			<input type="button" class="operator" id="minus" value="-" onclick="pushButton(this.value)">
+			<input type="button" class="nums" id="equal" value="=" onclick="calculateResult()">
+
+	    </div>
+	    <div>		
+			<input type="button" class="nums" id="zero" value="0" onclick="pushButton(this.value)">
+			<input type="button" class="nums" id="dblzero" value="00" onclick="pushButton(this.value)">	
+			<input type="button" class="nums" id="decimal" value="." onclick="pushButton(this.value)">			
+			<input type="button" class="operator" id="plus" value="+" onclick="pushButton(this.value)">
+			<input type="button" class="nums" id="equal" value="=" onclick="calculateResult()">			
 		</div>
 </div>
 
